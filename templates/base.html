@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SentinelPass</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h2>🔐 SentinelPass</h2>
+
+        <a href="/">Dashboard</a>
+
+        <a href="/generator">
+            Password Generator
+        </a>
+
+        <a href="/breach">
+            Breach Check
+        </a>
+
+        <a href="/reports">
+            Reports
+        </a>
+
+        <a href="/settings">
+            Settings
+        </a>
+
+    </div>
+
+    <!-- PAGE CONTENT -->
+
+    <div class="content">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+</body>
+
+</html>

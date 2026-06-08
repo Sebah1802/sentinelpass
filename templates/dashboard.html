@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="page-title">
+    Dashboard
+</h1>
+
+<div class="dashboard-grid">
+
+    <!-- PASSWORD ANALYSIS -->
+
+    <div class="card">
+
+        <h2>Password Analysis</h2>
+
+        <p>Enter a password and analyze it.</p>
+
+        <form method="POST">
+
+            <div class="password-container">
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required>
+
+                <button
+                    type="button"
+                    class="eye-btn"
+                    onclick="togglePassword()">
+
+                    👁
+
+                </button>
+
+            </div>
+
+            <button type="submit">
+                Analyze Password
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- SECURITY OVERVIEW -->
+
+    <div class="card">
+
+        <h2>Security Overview</h2>
+
+        <p>
+            <strong>Strength:</strong>
+            {{ strength }}
+        </p>
+
+        <p>
+            <strong>Score:</strong>
+            {{ security_score }}/100
+        </p>
+
+        <p>
+            <strong>Length:</strong>
+            {{ length }}
+        </p>
+
+        <p>
+            <strong>Entropy:</strong>
+            {{ entropy }} bits
+        </p>
+
+        <p>
+            <strong>Crack Time:</strong>
+            {{ crack_time }}
+        </p>
+
+        {% if breached %}
+
+            <p style="color:red;">
+                ⚠ BREACHED
+            </p>
+
+        {% else %}
+
+            <p style="color:lime;">
+                ✓ SAFE
+            </p>
+
+        {% endif %}
+
+    </div>
+
+    <!-- RECOMMENDATIONS -->
+
+    <div class="card">
+
+        <h2>Recommendations</h2>
+
+        <ul class="recommendations">
+
+            {% if length < 8 %}
+            <li>Use at least 8 characters.</li>
+            {% endif %}
+
+            {% if strength == "Weak" %}
+            <li>Add uppercase letters.</li>
+            <li>Add numbers.</li>
+            <li>Add special characters.</li>
+            {% endif %}
+
+            {% if breached %}
+            <li>Change this password immediately.</li>
+            {% endif %}
+
+            {% if strength == "Strong" and not breached %}
+            <li>Good job! Your password is secure.</li>
+            {% endif %}
+
+        </ul>
+
+    </div>
+
+    <!-- SUGGESTED PASSWORD -->
+
+    <div class="card">
+
+        <h2>Suggested Password</h2>
+
+        <div
+            id="generatedPassword"
+            class="password-box">
+
+            {{ suggested_password }}
+
+        </div>
+
+        <button
+            onclick="copyPassword()">
+
+            Copy Password
+
+        </button>
+
+    </div>
+
+</div>
+
+{% endblock %}

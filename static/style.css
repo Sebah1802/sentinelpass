@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#071320;
+    color:white;
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:260px;
+
+    background:#05101a;
+
+    padding:25px;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+    bottom:0;
+
+    border-right:1px solid #14304a;
+}
+
+.sidebar h2{
+
+    margin-bottom:40px;
+
+    color:#39ff14;
+}
+
+.sidebar a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    background:#102235;
+
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+.sidebar a:hover{
+
+    background:#1e90ff;
+}
+
+/* CONTENT */
+
+.content{
+
+    margin-left:260px;
+
+    padding:40px;
+
+    width:100%;
+}
+
+.page-title{
+
+    font-size:36px;
+
+    margin-bottom:30px;
+
+    color:#39ff14;
+}
+
+/* CARDS */
+
+.card{
+
+    background:#0d1e30;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 0 15px rgba(0,255,100,0.1);
+
+    min-height:220px;
+}
+
+.card h2{
+
+    margin-bottom:15px;
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+}
+
+button{
+
+    background:#39ff14;
+
+    color:black;
+
+    font-weight:bold;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+button:hover{
+
+    opacity:.9;
+}
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.password-container{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+    margin-bottom:15px;
+}
+
+.password-container input{
+
+    flex:1;
+}
+
+.eye-btn{
+
+    width:60px;
+
+    background:#1e90ff;
+
+    color:white;
+}
+
+.password-box{
+
+    background:#08111d;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    color:#39ff14;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+.recommendations{
+
+    padding-left:20px;
+}
+
+.recommendations li{
+
+    margin-bottom:10px;
+}
