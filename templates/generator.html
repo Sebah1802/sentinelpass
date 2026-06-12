@@ -1,8 +1,136 @@
-<h1>Password Generator</h1>
 {% extends "base.html" %}
 
 {% block content %}
 
-<h1>Dashboard</h1>
+<h1 class="page-title">
+    Password Generator
+</h1>
+
+<div class="card">
+
+    <h2>Generate Secure Password</h2>
+
+    <form method="POST">
+
+        <label>
+    Password Length:
+    <span id="lengthValue">
+        {{ length }}
+    </span>
+</label>
+
+<input
+    type="range"
+    id="lengthSlider"
+    name="length"
+    min="8"
+    max="128"
+    value="{{ length }}"
+    oninput="
+        document.getElementById(
+            'lengthValue'
+        ).innerText = this.value
+    "
+>
+        
+
+        <br><br>
+
+        <div class="checkbox-group">
+
+    <label>
+
+        <input
+            type="checkbox"
+            name="uppercase"
+            checked
+        >
+
+        Uppercase Letters
+
+    </label>
+
+</div>
+
+<div class="checkbox-group">
+
+    <label>
+
+        <input
+            type="checkbox"
+            name="lowercase"
+            checked
+        >
+
+        Lowercase Letters
+
+    </label>
+
+</div>
+
+<div class="checkbox-group">
+
+    <label>
+
+        <input
+            type="checkbox"
+            name="numbers"
+            checked
+        >
+
+        Numbers
+
+    </label>
+
+</div>
+
+<div class="checkbox-group">
+
+    <label>
+
+        <input
+            type="checkbox"
+            name="symbols"
+            checked
+        >
+
+        Special Characters
+
+    </label>
+
+</div>
+        <br><br>
+
+        <button type="submit">
+
+            Generate Password
+
+        </button>
+
+    </form>
+
+</div>
+
+<div class="card">
+
+    <h2>Generated Password</h2>
+
+    <div
+        id="generatedPassword"
+        class="password-box">
+
+        {{ generated_password }}
+
+    </div>
+
+    <button
+        type="button"
+        onclick="copyPassword()">
+
+        Copy Password
+
+    </button>
+
+</div>
 
 {% endblock %}

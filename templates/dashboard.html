@@ -62,6 +62,20 @@
             {{ security_score }}/100
         </p>
 
+        <div class="strength-bar">
+
+            <div
+                class="strength-fill"
+                style="width: {{ security_score }}%;">
+
+            </div>
+
+        </div>
+
+        <p>
+            {{ security_score }}%
+        </p>
+
         <p>
             <strong>Length:</strong>
             {{ length }}
@@ -125,17 +139,19 @@
 
     <!-- SUGGESTED PASSWORD -->
 
-    <div class="card">
+<div class="card">
 
-        <h2>Suggested Password</h2>
+    <h2>Suggested Password</h2>
 
-        <div
-            id="generatedPassword"
-            class="password-box">
+    <div
+        id="generatedPassword"
+        class="password-box">
 
-            {{ suggested_password }}
+        {{ suggested_password }}
 
-        </div>
+    </div>
+
+    <div class="button-group">
 
         <button
             onclick="copyPassword()">
@@ -143,6 +159,16 @@
             Copy Password
 
         </button>
+
+        <a href="/download-report">
+
+            <button type="button">
+
+                Download Report PDF
+
+            </button>
+
+        </a>
 
     </div>
 

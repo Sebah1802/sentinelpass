@@ -199,3 +199,485 @@ button:hover{
 
     margin-bottom:10px;
 }
+
+.password-box{
+
+    background:#05101a;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    margin-top:15px;
+
+    margin-bottom:15px;
+
+    color:#39ff14;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    word-break:break-all;
+}
+
+.checkbox-group{
+
+    margin-bottom:15px;
+}
+
+.checkbox-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+}
+
+.checkbox-group input[type="checkbox"]{
+
+    width:auto;
+
+    margin:0;
+}
+
+.strength-bar{
+
+    width:100%;
+
+    height:20px;
+
+    background:#05101a;
+
+    border-radius:10px;
+
+    margin-top:10px;
+
+    overflow:hidden;
+}
+
+.strength-fill{
+
+    height:100%;
+
+    background:#39ff14;
+
+    transition:0.5s;
+}
+
+.strength-bar{
+
+    width:100%;
+
+    height:20px;
+
+    background:#05101a;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    margin-top:10px;
+
+    margin-bottom:10px;
+}
+
+.strength-fill{
+
+    height:100%;
+
+    background:#39ff14;
+
+    transition:0.5s ease;
+}
+
+.button-group{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:15px;
+
+    flex-wrap:wrap;
+}
+
+/* SENTINEL GREEN */
+
+.green-theme{
+
+    --accent:#39ff14;
+}
+
+/* CYBER BLUE */
+
+.blue-theme{
+
+    --accent:#00bfff;
+}
+
+/* HACKER PURPLE */
+
+.purple-theme{
+
+    --accent:#c44dff;
+}
+
+/* Dynamic Accent Usage */
+
+.page-title,
+.sidebar h2{
+
+    color:var(--accent,#39ff14);
+}
+
+button{
+
+    background:var(--accent,#39ff14);
+
+    color:black;
+}
+
+.password-box{
+
+    color:var(--accent,#39ff14);
+}
+
+.strength-fill{
+
+    background:var(--accent,#39ff14);
+}
+
+.theme-btn{
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    margin-right:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+.green-btn{
+
+    background:#39ff14;
+    color:black;
+}
+
+.blue-btn{
+
+    background:#00bfff;
+    color:black;
+}
+
+.purple-btn{
+
+    background:#c44dff;
+    color:black;
+}
+
+/* LIGHT MODE */
+
+.light-theme{
+
+    background:#cfe0f0;
+
+    color:#111;
+}
+
+.light-theme .sidebar{
+
+    background:#b8cfe6;
+
+    border-right:1px solid #8aa9c7;
+}
+
+.light-theme .card{
+
+    background:#eaf3fb;
+
+    color:#111;
+
+    border:1px solid #b7d4f0;
+
+    box-shadow:
+    0 0 10px rgba(30,144,255,0.15);
+}
+
+.light-theme .sidebar a{
+
+    background:#dce9f5;
+
+    color:#111;
+}
+
+.light-theme .sidebar a:hover{
+
+    background:#bdd8f2;
+}
+
+.light-theme input{
+
+    background:#f5faff;
+
+    color:#111;
+
+    border:1px solid #a8c5e0;
+}
+
+.light-theme .password-box{
+
+    background:#dce9f5;
+}
+
+/* DARK MODE */
+
+.dark-theme{
+
+    background:#071320;
+
+    color:white;
+}
+
+/* DARK MODE */
+
+.dark-theme{
+
+    background:#071320;
+    color:white;
+}
+
+/* LIGHT MODE */
+
+.light-theme{
+
+    background:#f5f5f5;
+    color:#111;
+}
+
+.light-theme .sidebar{
+
+    background:white;
+    border-right:1px solid #ccc;
+}
+
+.light-theme .card{
+
+    background:white;
+    color:black;
+    box-shadow:none;
+}
+
+.light-theme .sidebar a{
+
+    background:#e8e8e8;
+    color:black;
+}
+
+.light-theme .sidebar a:hover{
+
+    background:#d8d8d8;
+}
+
+.light-theme input{
+
+    background:white;
+    color:black;
+    border:1px solid #ccc;
+}
+
+.theme-btn{
+
+    margin-right:10px;
+}
+
+/* DARK MODE */
+
+.dark-theme{
+
+    --accent:#39ff14;
+
+    background:#071320;
+    color:white;
+}
+
+/* LIGHT MODE */
+
+.light-theme{
+
+    background:#f5f5f5;
+    color:#111;
+}
+
+.light-theme .sidebar{
+
+    background:white;
+    border-right:1px solid #ccc;
+}
+
+.light-theme .card{
+
+    background:white;
+    color:black;
+}
+
+.light-theme .sidebar a{
+
+    background:#e8e8e8;
+    color:black;
+}
+
+/* GREEN */
+
+.green-theme{
+
+    --accent:#39ff14;
+}
+
+/* BLUE */
+
+.blue-theme{
+
+    --accent:#00bfff;
+}
+
+/* PURPLE */
+
+.purple-theme{
+
+    --accent:#c44dff;
+}
+
+.page-title,
+.sidebar h2{
+
+    color:var(--accent,#39ff14);
+}
+
+button{
+
+    background:var(--accent,#39ff14);
+}
+
+.password-box{
+
+    color:var(--accent,#39ff14);
+}
+
+.strength-fill{
+
+    background:var(--accent,#39ff14);
+}
+
+/* MODES */
+
+.dark-theme{
+
+    background:#071320;
+    color:white;
+}
+
+.light-theme{
+
+    background:#f5f5f5;
+    color:#111;
+}
+
+.light-theme .sidebar{
+
+    background:white;
+    border-right:1px solid #ccc;
+}
+
+.light-theme .card{
+
+    background:white;
+    color:black;
+}
+
+.light-theme .sidebar a{
+
+    background:#e8e8e8;
+    color:black;
+}
+
+.light-theme .sidebar a:hover{
+
+    background:#d8d8d8;
+}
+
+.light-theme input{
+
+    background:white;
+    color:black;
+    border:1px solid #ccc;
+}
+
+/* ACCENTS */
+
+.green-theme{
+
+    --accent:#39ff14;
+}
+
+.blue-theme{
+
+    --accent:#00bfff;
+}
+
+.purple-theme{
+
+    --accent:#c44dff;
+}
+
+.page-title,
+.sidebar h2{
+
+    color:var(--accent,#39ff14);
+}
+
+button{
+
+    background:var(--accent,#39ff14);
+}
+
+.password-box{
+
+    color:var(--accent,#39ff14);
+}
+
+.strength-fill{
+
+    background:var(--accent,#39ff14);
+}
+
+.logo-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:30px;
+
+    padding-top:15px;
+}
+
+.logo{
+
+    width:220px;
+
+    height:auto;
+
+    display:block;
+}
+

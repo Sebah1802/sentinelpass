@@ -1,27 +1,123 @@
-# SentinelPass
+# SentinelPass 🔐
 
-A Flask-based cybersecurity dashboard that analyzes password strength, estimates crack time, calculates entropy, checks against breached passwords, and generates secure passwords.
+SentinelPass is a Flask-based cybersecurity dashboard designed to help users analyze password strength, detect breached passwords, generate secure passwords, and improve password security awareness.
+
+---
 
 ## Features
 
-- Password Strength Analysis
-- Security Score Calculation
-- Entropy Calculation
-- Crack Time Estimation
-- Breach Detection
-- Secure Password Generator
-- Modern Cybersecurity Dashboard UI
+* Password Strength Analysis
+* Security Score Calculation
+* Entropy Measurement
+* Password Crack Time Estimation
+* Real Breach Detection using Have I Been Pwned (HIBP)
+* Secure Password Generator
+* PDF Security Report Generation
+* Dark Mode & Light Mode Support
+* Custom Accent Themes (Green, Blue, Purple)
+* Responsive Cybersecurity Dashboard UI
 
-## Tech Stack
+---
 
-- Python
-- Flask
-- HTML
-- CSS
-- JavaScript
+## Technology Stack
 
-## Run
+* Python
+* Flask
+* HTML5
+* CSS3
+* JavaScript
+* ReportLab
+* Have I Been Pwned (HIBP) API
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Sebah1802/sentinelpass.git
+cd sentinelpass
+```
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Run the application:
+
+```bash
 python app.py
+```
+
+Open your browser and visit:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+## Project Structure
+
+```text
+sentinelpass/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── datasets/
+│   └── leaked_passwords.txt
+│
+├── static/
+│   ├── style.css
+│   └── script.js
+│
+└── templates/
+    ├── base.html
+    ├── dashboard.html
+    ├── generator.html
+    ├── breach.html
+    ├── settings.html
+    └── about.html
+```
+
+---
+
+## Screenshots
+
+Add screenshots of:
+
+* Dashboard
+* Password Generator
+* Breach Check
+* Settings Page
+* PDF Security Report
+
+---
+
+## Future Improvements
+
+* Advanced Security Analytics
+* Multi-Factor Authentication Checker
+* Enhanced Dashboard Visualizations
+* User Authentication System
+
+---
+
+## Author
+
+**Sebah Mariyam K M**
+
+Cybersecurity Enthusiast | Python & Flask Developer
+
+---
+
+## Copyright
+
+Copyright © 2026 Sebah Mariyam K M
+
+All Rights Reserved.

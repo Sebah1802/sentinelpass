@@ -10,8 +10,14 @@
 
     <title>SentinelPass</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+    <link
+        rel="icon"
+        type="image/png"
+        href="{{ url_for('static', filename='logo.png') }}">
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
 
 </head>
 
@@ -21,7 +27,14 @@
 
     <div class="sidebar">
 
-        <h2>🔐 SentinelPass</h2>
+        <div class="logo-area">
+
+            <img
+                src="{{ url_for('static', filename='logo.png') }}"
+                alt="SentinelPass Logo"
+                class="logo">
+
+        </div>
 
         <a href="/">Dashboard</a>
 
@@ -33,12 +46,12 @@
             Breach Check
         </a>
 
-        <a href="/reports">
-            Reports
-        </a>
-
         <a href="/settings">
             Settings
+        </a>
+
+        <a href="/about">
+            About
         </a>
 
     </div>
@@ -54,7 +67,8 @@
 
     <!-- JAVASCRIPT -->
 
-    <script src="{{ url_for('static', filename='script.js') }}">
+    <script
+        src="{{ url_for('static', filename='script.js') }}">
     </script>
 
 </body>

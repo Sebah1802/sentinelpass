@@ -1,8 +1,98 @@
-<h1>Breach Check</h1>
 {% extends "base.html" %}
 
 {% block content %}
 
-<h1>Dashboard</h1>
+<h1 class="page-title">
+    Breach Check
+</h1>
+
+<div class="card">
+
+    <h2>
+        Check Password Against Real Breach Database
+    </h2>
+
+    <form method="POST">
+
+        <div class="password-container">
+
+            <input
+                type="password"
+                id="breachPassword"
+                name="password"
+                placeholder="Enter Password"
+                required
+            >
+
+            <button
+                type="button"
+                class="eye-btn"
+                onclick="toggleBreachPassword()"
+            >
+                👁
+            </button>
+
+        </div>
+
+        <button type="submit">
+            Check Breach Status
+        </button>
+
+    </form>
+
+</div>
+
+{% if result %}
+
+<div class="card">
+
+    <h2>
+        🚨 Breach Status
+    </h2>
+
+    {% if result == "BREACHED" %}
+
+        <h1 style="color:red;">
+            ❌ BREACHED
+        </h1>
+
+    {% elif result == "SAFE" %}
+
+        <h1 style="color:lime;">
+            ✅ SAFE
+        </h1>
+
+    {% else %}
+
+        <h1 style="color:orange;">
+            ⚠ ERROR
+        </h1>
+
+    {% endif %}
+
+    <br>
+
+    <p>
+        <strong>Occurrences:</strong>
+        {{ count }}
+    </p>
+
+    <br>
+
+    <p>
+        <strong>Risk Level:</strong>
+        {{ risk }}
+    </p>
+
+    <br>
+
+    <p>
+        <strong>Recommendation:</strong>
+        {{ recommendation }}
+    </p>
+
+</div>
+
+{% endif %}
 
 {% endblock %}

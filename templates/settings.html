@@ -1,8 +1,121 @@
-<h1>Settings</h1>
 {% extends "base.html" %}
 
 {% block content %}
 
-<h1>Dashboard</h1>
+<h1 class="page-title">
+    Settings
+</h1>
+
+<div class="card">
+
+    <h2>Appearance</h2>
+
+    <button onclick="setMode('dark')">
+        🌙 Dark Mode
+    </button>
+
+    <button onclick="setMode('light')">
+        ☀️ Light Mode
+    </button>
+
+    <br><br>
+
+    <h2>Accent Color</h2>
+
+    <button class="theme-btn green-btn"
+        onclick="setAccent('green')">
+
+        🟢 Green
+
+    </button>
+
+    <button class="theme-btn blue-btn"
+        onclick="setAccent('blue')">
+
+        🔵 Blue
+
+    </button>
+
+    <button class="theme-btn purple-btn"
+        onclick="setAccent('purple')">
+
+        🟣 Purple
+
+    </button>
+
+</div>
+
+<br>
+
+<div class="card">
+
+    <h2>
+        Application Information
+    </h2>
+
+    <p>
+        <strong>Version:</strong>
+        1.0
+    </p>
+
+    <p>
+        <strong>Framework:</strong>
+        Flask
+    </p>
+
+    <p>
+        <strong>Breach Database:</strong>
+        Have I Been Pwned (HIBP)
+    </p>
+
+</div>
+
+<br>
+
+<div class="card">
+
+    <h2>
+        System Status
+    </h2>
+
+    <p style="color:lime;">
+        ✓ Password Generator Active
+    </p>
+
+    <p style="color:lime;">
+        ✓ Breach Detection Active
+    </p>
+
+    <p style="color:lime;">
+        ✓ PDF Report Generation Active
+    </p>
+
+</div>
+
+<br>
+
+<div class="card">
+
+    <h2>
+        Future Updates
+    </h2>
+
+    <ul class="recommendations">
+
+        <li>
+            Enhanced Security Analytics
+        </li>
+
+        <li>
+            Multi-Factor Authentication Checker
+        </li>
+
+        <li>
+            Password Security Dashboard Improvements
+        </li>
+
+    </ul>
+
+</div>
 
 {% endblock %}
