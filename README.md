@@ -85,19 +85,6 @@ sentinelpass/
     └── about.html
 ```
 
----
-
-## Screenshots
-
-Add screenshots of:
-
-* Dashboard
-* Password Generator
-* Breach Check
-* Settings Page
-* PDF Security Report
-
----
 
 ## Future Improvements
 
