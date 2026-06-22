@@ -50,10 +50,15 @@ def check_pwned_password(password):
     url = (
         f"https://api.pwnedpasswords.com/range/{prefix}"
     )
+    try:
 
-    response = requests.get(url)
+        response = requests.get(url,timeout=5)
 
-    if response.status_code != 200:
+        if response.status_code != 200:
+
+            return None
+
+    except requests.exceptions.RequestException:
 
         return None
 
